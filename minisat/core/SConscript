@@ -1,0 +1,9 @@
+import os
+Import('common_env')
+env = common_env.Clone()
+
+cc_sources = Glob('*.cc')
+
+objects = [ env.Object(s) for s in cc_sources ]
+
+Return('objects')

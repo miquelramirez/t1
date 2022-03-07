@@ -1,0 +1,15 @@
+import os
+
+env = Environment()
+
+include_paths = ['../include']
+lib_paths = ['../']
+
+env.Append( CPPPATH = [ os.path.abspath(p) for p in include_paths ] )
+env.Append( CCFLAGS = ['-g','-Wall', '-DDEBUG', '-D__STDC_LIMIT_MACROS', '-D__STDC_FORMAT_MACROS' ] )
+#env.Append( CCFLAGS = ['-O3','-Wall','-DNDEBUG', '-D__STDC_LIMIT_MACROS', '-D__STDC_FORMAT_MACROS' ] )
+env.Append( LIBS=[  'dl', 'z', 'minisat' ])
+env.Append( LIBPATH=[ os.path.abspath(p) for p in lib_paths ] )
+
+env.Program( 'minisat', env.Object( 'Main.cc' ) )
+
