@@ -10,3 +10,5 @@ Source code of the `T1` planner, bibliographic reference below
   year = {2011}
 }
 ```
+
+Benchmarks can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1sY_1PlEjxuBnooQe6bTa-gRru0r7Yna9?usp=sharing).
